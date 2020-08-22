@@ -1,0 +1,106 @@
+#topbar{
+    /*矩形圆角还没写*/
+    background-color: #73a977;
+    height:50px;
+    top:0;
+    
+    border:solid;
+    border-radius:5px;
+    border-color: #73a977;
+
+    position:sticky;
+
+    z-index: 100;   /*这种方式用来避免其他元素遮挡是工程化的吗*/
+
+}
+
+#menu{
+    text-align: center;
+    
+    position: absolute;
+    right:0;
+
+    width:100px;
+    height:30px;
+
+    top:20%;    /*这只是一种居中的方式，还有很多种*/
+    /*bottom: 50%;*/
+    
+    border:none;
+    border-radius: 25px;;
+    background-color:aliceblue;
+}
+
+#brief{
+    /*height:1000px;*/
+    background-color:#eeeeee ;
+}
+
+.share,.like{
+    color: white;
+    background-color: #1877f2;
+
+    border:1px solid;
+    border-radius: 5px;
+
+    height:50px;
+    width:100px;
+
+    display: inline-block;
+    position: relative;
+
+    /*为什么会在menu bar上面悬浮？*/
+}
+
+.like{
+    left:45%; /*为什么用这种方法可以实现这个效果？迷惑*/
+}
+
+.share{
+    left:45%    /*为什么用这种方法可以实现这个效果？迷惑*/
+}
+
+h1,h2,p{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin:auto;
+}
+
+.plan{
+    display: inline-block;
+    margin:auto;
+
+}
+
+.RAMimg{
+    height:200px;
+    border-radius: 50%;
+}
+
+#plan{
+    margin:auto;
+    width:50%;
+    /*视觉上并没有对对齐，有轻微错位*/
+}
+
+#contact{
+    background-color: #222222;
+    color: white;
+
+}
+
+.contactImg{
+    height: 30px;
+    filter:invert(100%) /*滤镜，100%为完全反色*/
+}
+
+.button.plan{
+    border:none;
+    background-color:  #35b4f1;
+    border-radius: 25px;
+    color:white;
+    padding:10px 32px;
+}
