@@ -3,13 +3,27 @@
     <head>
         <title>Download more RAM</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-    
+        <script src="script.js"></script>
+        
     </head>
 
-    <body>
+    <body onload="InitialLikeCounter();">
         <div id="topbar">
-            <img src="img/download2.png" width="60px" style="display: inline;">
-            <button type="button" id="menu">Menu</button>   <!--原版网页只有在无法容纳原有链接时才会显示menu-->
+            <ul>
+                <li><img src="img/download2.png" width="60px" style="display: inline;"></li>
+                <li><a href="#brief">HOME</a></li>
+                <li><a href="#plan">PLAN</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">MENU</a>   <!--原版网页只有在无法容纳原有链接时才会显示menu-->
+                    <div class="dropdown-content">
+                        <a href="#brief">HOME</a>
+                        <a href="#plan">PLAN</a>
+                        <a href="#contact">CONTACT</a>
+                    </div>
+                </div>
+            </ul>
         </div> <!--considering use navigator-->
 
         <div id="brief">
@@ -17,41 +31,46 @@
             <h2>Instant, Fast, Free</h2>
             <img src="img/banner.png">
 
-            <button type="button" class="button like"><img src="img/like2.png" height="30px" style="background-color:transparent; display: inline;filter:invert(100%);"> Like</button>
-            <button type="button" class="button share"><img src="img/share.png" height="30px" style="background-color: transparent; display: inline;filter:invert(100%);"> Share</button>
-            <p>A lot of people like this! Sign up to see what your friends like.</p>
+            <div id="briefButtons">
+                <button type="button" class="button like" onclick="oneMoreLike();"><img src="img/like2.png" height="30px" style="background-color:transparent; display: inline;filter:invert(100%);"> Like</button>
+                <button type="button" class="button share"><img src="img/share.png" height="30px" style="background-color: transparent; display: inline;filter:invert(100%);"> Share</button>
+            </div>
+
+            <p id="likeCounter">A lot of people like this! Sign up to see what your friends like.</p>
         </div>
 
         <div id="plan">
             <h1>Download</h1>
             <h2>Please select the amount of RAM you would like to download. One cannot simply download too much RAM.</h2>
             
-            <div id="4GB" class="plan">
-                <img src="img/4GB.png" class="RAMimg">
-                <h1>4 GB</h1>
-                <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
-                <center><button type="button" class="button plan">SELECT PLAN</button></center>
-            </div>
-        
-            <div id="8GB" class="plan">
-                <img src="img/8GB.png" class="RAMimg">
-                <h1>8 GB</h1>
-                <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
-                <center><button type="button"  class="button plan">SELECT PLAN</button></center>
-            </div>
-
-            <div id="16GB" class="plan">
-                <img src="img/16GB.png" class="RAMimg">
-                <h1>16 GB</h1>
-                <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
-                <center><button type="button" class="button plan">SELECT PLAN</button></center>
-            </div>
-
-            <div id="32GB" class="plan">
-                <img src="img/32GB.png" class="RAMimg">
-                <h1>32 GB</h1>
-                <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
-                <center><button type="button" class="button plan">SELECT PLAN</button></center>
+            <div id="planShow">
+                <div id="4GB" class="plan">
+                    <img src="img/4GB.png" class="RAMimg">
+                    <h1>4 GB</h1>
+                    <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
+                    <center><button type="button" class="button plan">SELECT PLAN</button></center>
+                </div>
+            
+                <div id="8GB" class="plan">
+                    <img src="img/8GB.png" class="RAMimg">
+                    <h1>8 GB</h1>
+                    <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
+                    <center><button type="button"  class="button plan">SELECT PLAN</button></center>
+                </div>
+    
+                <div id="16GB" class="plan">
+                    <img src="img/16GB.png" class="RAMimg">
+                    <h1>16 GB</h1>
+                    <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
+                    <center><button type="button" class="button plan">SELECT PLAN</button></center>
+                </div>
+    
+                <div id="32GB" class="plan">
+                    <img src="img/32GB.png" class="RAMimg">
+                    <h1>32 GB</h1>
+                    <p>DDR4-2400<br>10-12-10-27<br>1.65V</p>
+                    <center><button type="button" class="button plan">SELECT PLAN</button></center>
+                </div>
             </div>
         </div>
 
@@ -71,7 +90,7 @@
             </div>
 
             <div id="weibo">
-                <img src="img/weibo.png" width="36.6px" class="contactImg">
+                <img src="img/weibo.png" class="contactImg">
                 <p>DownloadMoreRAM</p>
             </div>
 
