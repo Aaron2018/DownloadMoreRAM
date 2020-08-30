@@ -1,17 +1,66 @@
 #topbar{
-    /*矩形圆角还没写*/
-    background-color: #73a977;
-    height:50px;
+    position: sticky;
+    width: 100%;
+
+    border: solid;
+    border-color: #333;
+    border-radius: 5px;
     top:0;
-    
-    border:solid;
-    border-radius:5px;
-    border-color: #73a977;
+}
 
-    position:sticky;
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color: #333;
+}
 
-    z-index: 100;   /*这种方式用来避免其他元素遮挡是工程化的吗*/
+li{
+    float: left;
+}
 
+li a,.dropbtn{
+    display: inline-block;
+    color:white;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: absolute;
+    display:inline-block;
+}
+
+li a:hover, .dropdown:hover, .dropbtn{
+    background-color: #111;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:#ffffff ;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown-content a{
+    color:black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:12px 16px;
+    display: block;
+    right:0;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
 }
 
 #menu{
@@ -29,14 +78,19 @@
     border:none;
     border-radius: 25px;;
     background-color:aliceblue;
+    cursor: pointer;
 }
 
 #brief{
     /*height:1000px;*/
     background-color:#eeeeee ;
+    margin: 0 auto;
 }
 
 .share,.like{
+    display: inline-block;
+    margin:0 auto;
+
     color: white;
     background-color: #1877f2;
 
@@ -45,19 +99,11 @@
 
     height:50px;
     width:100px;
-
-    display: inline-block;
-    position: relative;
-
-    /*为什么会在menu bar上面悬浮？*/
 }
 
-.like{
-    left:45%; /*为什么用这种方法可以实现这个效果？迷惑*/
-}
-
-.share{
-    left:45%    /*为什么用这种方法可以实现这个效果？迷惑*/
+#briefButtons{
+    display: flex;
+    
 }
 
 h1,h2,p{
@@ -72,18 +118,23 @@ img{
 .plan{
     display: inline-block;
     margin:auto;
+}
 
+.button.plan{
+    border:none;
+    background-color:  #35b4f1;
+    border-radius: 25px;
+    color:white;
+    padding:10px 32px;
+}
+
+#planShow{
+    display: flex;
 }
 
 .RAMimg{
     height:200px;
     border-radius: 50%;
-}
-
-#plan{
-    margin:auto;
-    width:50%;
-    /*视觉上并没有对对齐，有轻微错位*/
 }
 
 #contact{
@@ -95,12 +146,4 @@ img{
 .contactImg{
     height: 30px;
     filter:invert(100%) /*滤镜，100%为完全反色*/
-}
-
-.button.plan{
-    border:none;
-    background-color:  #35b4f1;
-    border-radius: 25px;
-    color:white;
-    padding:10px 32px;
 }
